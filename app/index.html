@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="marvis, dan, marvidan, paris, AngularJS, Grunt, javascript, jquery, etudiant, students, metiers, multimedia, internet, iut, meaux, upem, université, marne-la-vallee, developpeur, developer, web, web developer, design, ux, ui">
+  <meta name="description" content="Marvis Dan Portfolio. developer front-end based in Paris. JavaScript lover.">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href=".tmp/styles/monstyleensass.css">
+    <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
+
+
+    <!-- endbuild -->
+    <script src="bower_components/jquery/dist/folio.js"></script>
+
+
+  </head>
+  <body ng-app="portfolio">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div class="container-fluid" ng-controller="portfolioCtrl">
+      <div class="row">
+        <nav class=" col-lg-2 col-md-2 col-sm-2 col-xs-2" id="nav">
+          <ul class="nav">
+            <span ><img class="cross" src="images/menu-off.png" width="30" height="30"><a ng-href="#" align="left"></a></span>
+            <h1 class="menu-word"><a ng-href="#section1"> Menu </a></h1>
+            <h5 class="github"><a ng-href="https://github.com/marvisdan" class="bouton">@github.com/marvisdan</a></h5>
+            <li><h3 class="couleur-lien"><a ng-href="#section2"> À propos </a></h3> </li>
+            <li><h3 class="couleur-lien"><a ng-href="#section3"> Compétences </a></h3> </li>
+            <li><h3 class="couleur-lien"><a ng-href="#section4"> Projets </a></h4> </li>
+            <li><h3 class="couleur-lien"><a ng-href="#section5"> Contact </a></h3>  </li>
+          </ul>
+        </nav>
+
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" id="taille-ecran">
+
+          <div id="section1">
+            <div class="header">
+              <span class="menu-icon"><img src="images/menu_on.png" width="32" height="32"><a ng-href="#"></a></span>
+              <span class="title">marvisDan</span>
+              <h1><span class="git"><a href="https://github.com/marvisdan" target="_blank" class="pure-button socicon-button"><span class="socicon socicon-github"></span></a></span></h1>
+            </div>
+            <h1>Hi!</h1>
+            <h2>My name is Marvis.</h2>
+            <h2 class="substitle">I’m a Front-end developer</h2>
+            <h2 class="substitle">based in Paris. </h2>
+          </div>
+          <div  id="section2">
+            <div class="container">
+            <h1>À propos de moi</h1>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="grandediv">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="apropos">
+              <p>{{apropos.description}}
+                <br/>{{apropos.passion}}</p>
+                <p>{{apropos.competences}}</p><br/>
+                <p>{{apropos.predilection}}</br></br>
+                <span>JavaScript</span><span>AngularJS</span><span>Sass</span><span>JQuery</span></p>
+            </div>
+          </div>
+          </div>
+        </div>
+          <div id="section3">
+              <h1>Mes compétences</h1>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="text2">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="text2">
+
+                  <img ng-src="images/code3.png" class="img-comp" height="80px" width="80px">
+                  <p class="domaine">DÉVELOPPEMENT WEB </p><hr/>
+                  <p class="text-domaine">{{competence.dev}} </p>
+              </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="text2">
+
+                  <img ng-src="images/crayon.png" class="img-comp" height="80px" width="80px">
+                  <p class="domaine">WEB DESIGN </p><hr/>
+                  <p class="text-domaine">{{competence.design}}</p>
+                </div>
+
+              </div>
+          </div>
+          <div id="section4">
+              <h1>Projets</h1>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6" id="bloc4">
+              <ul class="projet">
+                <li><h3 class="projectname glyphicon-plus"><a ng-href="#sitedesophie"> {{sophie.nom}}</a></h3>
+                  <p class="projettext">{{sophie.description}}</br>
+                    {{sophie.description2}}</br>
+                    <span class="langage">langages : {{sophie.langage}}</span></br>
+                    <span class="gitprojet"><a ng-href="http://sophiechaffaut.com" target="_blank">{{sophie.link}}</a></span>
+                  </p>
+                </li>
+                <li><h3 class="projectname glyphicon-plus"><a ng-href="#suggestionbox"> {{box.nom}}</a></h3>
+                  <p class="projettext">{{box.description}}</br>
+                    <span class="langage">langages : {{box.langage}}</span></br>
+                    <span class="gitprojet"><a ng-href="">{{box.github}}</a></span>
+                  </p>
+                </li>
+                <li><h3 class="projectname glyphicon-plus"><a ng-href="#MovieBoardApp">{{movie.nom}}</a></h3>
+                  <p class="projettext">{{movie.description}}</br>
+                    <span class="langage">langages : {{movie.langage}}</span></br>
+                    <span class="gitprojet"><a ng-href="https://github.com/marvisdan/movieBoard">{{movie.github}}</a></span>
+                  </p>
+                </li>
+                <li><h3 class="projectname glyphicon-plus"><a ng-href="#Interactive Portfolio">{{ip.nom}}</a></h3>
+                  <p class="projettext">{{ip.description}}</br>
+                    <span class="langage">langages : {{ip.langage}}</span></br>
+                    <span class="gitprojet"><a ng-href="https://github.com/marvisdan/projet-kinect">{{ip.github}}</a></span>
+                  </p>
+                </li>
+                <li><h3 class="projectname glyphicon-plus"><a ng-href="#Echo">{{echo.nom}}</a></h3>
+                  <p class="projettext">{{echo.description}}</br>
+                    <span class="langage">langages : {{echo.langage}}</span></br>
+                    <span class="gitprojet "><a ng-href="https://github.com/vnctaing/echo">{{echo.github}}</a></span>
+                    <span class="gitprojet "><a ng-href="https://www.behance.net/Marvisdan"><br/>{{echo.link}}</a></span>
+                  </p>
+                </li>
+                <li><h3 class="projectname glyphicon-plus"><a ng-href="#To-do-list-sortable"></a>{{todo.nom}}</h3>
+                  <p class="projettext">{{todo.description}}</br>
+                    <span class="langage">langages : {{todo.langage}}</span></br>
+                    <span class="gitprojet"><a ng-href="">{{todo.github}}</a></span>
+                  </p>
+                </li>
+              </ul>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" id="bloc5">
+                <ul>
+                <li ><h2>Compétences</h2></li>
+                <li><h4>JAVASCRIPT + ANGULARJS</h4></li>
+                <li><h4>HTML - BOOTSTRAP</h4></li>
+                <li><h4>CSS - SASS</h4></li>
+                <li><h4>SUITE ADOBE - SKETCH </h4></li>
+                <li><h4>WORDPRESS</h4></li>
+                <li><h4>JQUERY</h4></li>
+                <li><h4>GIT</h4></li>
+              </ul>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div id="section5">
+              <h1>Contact</h1>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                  <p>Je suis actuellement <span class="gras">disponible</span> pour un stage<br/> en <span class="gras">développement front-end</span> à partir du 15 avril 2016</p>
+                  <p>
+                    <div class="container">
+                      <ul>
+                      <li><a href="mailto:marvis.dan@gmail.com" class="pure-button socicon-button"><span class="socicon socicon-mail"></span></li>
+                      <li><a href="https://www.linkedin.com/in/marvisdan" target="_blank" class="pure-button socicon-button"><span class="socicon socicon-linkedin"></span></a></li>
+                      <li><a href="https://github.com/marvisdan" target="_blank" class="pure-button socicon-button"><span class="socicon socicon-github"></span></a></li>
+                      <li><a href="https://www.behance.net/Marvisdan" target="_blank" class="pure-button socicon-button"><span class="socicon socicon-behance"></span></a></li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <ul>
+              <li><p class="texte1">marvis danPortfolio - Tous droits reservés</p></li>
+              <li><p class="texte2"> Site réalisé avec AngularJS, JQuery et Sass </p></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    </body>
+
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/portfolioCtrl.js"></script>
+        <script src="scripts/folio.js"></script>
+
+        <!-- endbuild -->
+</body>
+</html>
